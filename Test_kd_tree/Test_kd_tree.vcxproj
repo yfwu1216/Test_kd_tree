@@ -99,12 +99,16 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\CompliedSource\PCL 1.8.1\include\pcl-1.8;D:\CompliedSource\PCL 1.8.1\3rdParty\Boost\include\boost-1_64;D:\CompliedSource\PCL 1.8.1\3rdParty\Eigen\eigen3;D:\CompliedSource\PCL 1.8.1\3rdParty\FLANN\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-D_SCL_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\CompliedSource\PCL 1.8.1\lib;D:\CompliedSource\PCL 1.8.1\3rdParty\Boost\lib;D:\CompliedSource\PCL 1.8.1\3rdParty\Eigen\eigen3;D:\CompliedSource\PCL 1.8.1\3rdParty\FLANN\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pcl_common_debug.lib;pcl_features_debug.lib;pcl_filters_debug.lib;pcl_io_debug.lib;pcl_io_ply_debug.lib;pcl_kdtree_debug.lib;pcl_keypoints_debug.lib;pcl_ml_debug.lib;pcl_octree_debug.lib;pcl_outofcore_debug.lib;pcl_people_debug.lib;pcl_recognition_debug.lib;pcl_registration_debug.lib;pcl_sample_consensus_debug.lib;pcl_search_debug.lib;pcl_segmentation_debug.lib;pcl_stereo_debug.lib;pcl_surface_debug.lib;pcl_tracking_debug.lib;pcl_visualization_debug.lib;libboost_atomic-vc140-mt-gd-1_64.lib;libboost_bzip2-vc140-mt-gd-1_64.lib;libboost_chrono-vc140-mt-gd-1_64.lib;libboost_container-vc140-mt-gd-1_64.lib;libboost_context-vc140-mt-gd-1_64.lib;libboost_coroutine-vc140-mt-gd-1_64.lib;libboost_date_time-vc140-mt-gd-1_64.lib;libboost_exception-vc140-mt-gd-1_64.lib;libboost_fiber-vc140-mt-gd-1_64.lib;libboost_filesystem-vc140-mt-gd-1_64.lib;libboost_graph_parallel-vc140-mt-gd-1_64.lib;libboost_graph-vc140-mt-gd-1_64.lib;libboost_iostreams-vc140-mt-gd-1_64.lib;libboost_locale-vc140-mt-gd-1_64.lib;libboost_log-vc140-mt-gd-1_64.lib;libboost_log_setup-vc140-mt-gd-1_64.lib;libboost_math_c99-vc140-mt-gd-1_64.lib;libboost_math_c99f-vc140-mt-gd-1_64.lib;libboost_math_c99l-vc140-mt-gd-1_64.lib;libboost_math_tr1-vc140-mt-gd-1_64.lib;libboost_math_tr1f-vc140-mt-gd-1_64.lib;libboost_math_tr1l-vc140-mt-gd-1_64.lib;libboost_mpi-vc140-mt-gd-1_64.lib;libboost_numpy3-vc140-mt-gd-1_64.lib;libboost_numpy-vc140-mt-gd-1_64.lib;libboost_prg_exec_monitor-vc140-mt-gd-1_64.lib;libboost_program_options-vc140-mt-gd-1_64.lib;libboost_python3-vc140-mt-gd-1_64.lib;libboost_python-vc140-mt-gd-1_64.lib;libboost_random-vc140-mt-gd-1_64.lib;libboost_regex-vc140-mt-gd-1_64.lib;libboost_serialization-vc140-mt-gd-1_64.lib;libboost_signals-vc140-mt-gd-1_64.lib;libboost_system-vc140-mt-gd-1_64.lib;libboost_test_exec_monitor-vc140-mt-gd-1_64.lib;libboost_thread-vc140-mt-gd-1_64.lib;libboost_timer-vc140-mt-gd-1_64.lib;libboost_type_erasure-vc140-mt-gd-1_64.lib;libboost_unit_test_framework-vc140-mt-gd-1_64.lib;libboost_wave-vc140-mt-gd-1_64.lib;libboost_wserialization-vc140-mt-gd-1_64.lib;libboost_zlib-vc140-mt-gd-1_64.lib;flann_cpp_s-gd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -141,9 +145,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
